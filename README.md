@@ -151,7 +151,7 @@ Now, we follow what Red has been doing at the same time. Things are similar, exc
     ld a,$08 ; interrupt from serial only
     ldh ($FF),a
 
-    ld hl,$d600 ; send Blue the code mentioned above that starts with "26 0A 74", preceded by an FD (preamble) byte
+    ld hl,$d600 ; send Blue the code mentioned above that starts with "26 0A 74", preceded by an FD byte
     ld de,$c220 ; discard the useless data received from Blue into a graphics buffer
     ld bc,$0110
     call $216F ; Serial_ExchangeBytes (216F)
